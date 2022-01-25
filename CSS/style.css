@@ -10,7 +10,8 @@ body {
 /* header */
 
 header {
-    width: 100%;
+    width: 100vw;
+    max-width: 500px;
     background-color: #CF2B2B;
     height: 92px;
     display: flex;
@@ -40,6 +41,7 @@ nav p {
 main {
     margin-top: 123px;
     margin-left: 19px;
+    max-width: 481px;
 }
 
 .pedidos {
@@ -56,22 +58,16 @@ main {
     margin-bottom: 17px;
 }
 
-.pedidos div {
+.pedidos__opcoes {
     display: flex;
     overflow-x: auto;
-    overflow-y: hidden;
     padding-bottom: 15px;
 }
 
 .pedido {
-    height: 220px;
-    width: 172px;
+    min-width: 172px;
     border-radius: 9px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding-left: 14px;
-    padding-right: 14px;
     margin-right: 16px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
 }
@@ -80,17 +76,21 @@ main {
     margin-right: 19px;
 }
 
+.pedido__imagem {
+    display: flex;
+    justify-content: center;
+    margin: 18px 0 8px;
+}
+
 .pedido img {
     height: 87px;
-    width: 144px;
-    margin-top: 18px;
-    margin-bottom: 8px;
+    max-width: 144px;
     border-radius: 4px;
 }
 
 .pedido p:first-of-type {
     font-size: 16px;
-    margin-bottom: 4px;
+    margin: 0 14px 4px;
     font-weight: 700;
     line-height: 18.75px;
 }
@@ -98,20 +98,23 @@ main {
 .pedido span {
     font-size: 15px;
     font-weight: 300;
-    margin-bottom: 5px;
+    display: block;
+    margin: 0 14px 5px;
     color: #A6A6A6;
     line-height: 17.58px;
 }
 
 .pedido p:last-of-type {
     font-size: 16px;
+    margin: 0 14px 18px;
 }
 
 /* footer */
 
 footer {
     height: 92px;
-    width: 100%;
+    width: 100vw;
+    max-width: 500px;
     background-color: white;
     position: fixed;
     bottom: 0;
@@ -135,4 +138,22 @@ footer p {
     font-size: 20px;
     color: white;
     line-height: 23.44px;
+}
+
+/* media */
+
+@media screen and (min-width: 500px) {
+    
+    header {
+        left: calc((100vw - 500px) / 2);
+    }
+
+    main {
+        margin-left: calc((100vw - 500px) / 2 + 19px);
+    }
+
+    footer {
+        left: calc((100vw - 500px) / 2);
+    }
+
 }
