@@ -115,7 +115,10 @@ function referencia() {
     let bebida__wpp = document.getElementById("bebida__nome").innerHTML
     let sobremesa__wpp = document.getElementById("sobremesa__nome").innerHTML
 
-    let texto__base = "Olá, eu gostaria de fazer o pedido: \n - Prato:  " + prato__wpp + "\n - Bebida:  " + bebida__wpp + "\n - Sobremesa:  " + sobremesa__wpp + "\nTotal: R$ " + precoTotal.toFixed(2)
+    let user__name = prompt("Qual é o seu nome?")
+    let user__address = prompt("Qual é o seu endereço?")
+
+    let texto__base = "Olá, eu gostaria de fazer o pedido: \n - Prato:  " + prato__wpp + "\n - Bebida:  " + bebida__wpp + "\n - Sobremesa:  " + sobremesa__wpp + "\nTotal: R$ " + precoTotal.toFixed(2) + "\n\nNome: " + user__name + "\nEndereço: " + user__address
     let texto__final = encodeURIComponent(texto__base)
     document.getElementById("link__wpp").href = ("https://wa.me/5541988591886?text=" + texto__final)
 }
