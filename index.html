@@ -28,40 +28,45 @@
 
         <section class="pedidos">
             <h1>Primeiro, seu prato</h1>
-            <div class="pedidos__opcoes">
-                <article class="pedido">
+            <div class="pedidos__opcoes comidas">
+
+                <article class="pedido frango" onclick="escolherComida('.frango')">
                     <div class="pedido__imagem">
                         <img src="imagens/frango.png" alt="frango">
                     </div>
                     <p>Frango Yin Yang</p>
                     <span>Um pouco de batata, um pouco de salada</span>
                     <p>R$ 14,90</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-1f"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido hamburguer" onclick="escolherComida('.hamburguer')">
                     <div class="pedido__imagem">
                         <img src="imagens/hamburguer.png" alt="hamburguer">
                     </div>
                     <p>Quarter Citzen Burger</p>
                     <span>Querteirão duplo com queijo</span>
                     <p>R$ 24,99</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-1h"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido baguete" onclick="escolherComida('.baguete')">
                     <div class="pedido__imagem">
                         <img src="imagens/baguete.png" alt="baguete">
                     </div>
                     <p>Baguete francesa com contra file</p>
                     <span>Baguete com carne e queijo mussarela</span>
                     <p>R$ 30,65</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-1b"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido xcomida" onclick="escolherComida('.xcomida')">
                     <div class="pedido__imagem">
                         <img src="imagens/x.png" alt="x">
                     </div>
                     <p>Sem prato principal</p>
                     <p>R$ 0,00</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-1x"></ion-icon>
                 </article>
 
             </div>
@@ -69,80 +74,91 @@
 
         <section class="pedidos">
             <h1>Agora, sua bebida</h1>
-            <div class="pedidos__opcoes">
-                <article class="pedido">
+            <div class="pedidos__opcoes bebidas">
+
+                <article class="pedido coca" onclick="escolherBebida('.coca')">
                     <div class="pedido__imagem">
                         <img src="imagens/coca.png" alt="coca">
                     </div>
                     <p>Coquinha gelada</p>
                     <span>Lata 350ml</span>
                     <p>R$ 4,90</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-2c"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido guarana" onclick="escolherBebida('.guarana')">
                     <div class="pedido__imagem">
                         <img src="imagens/guarana.png" alt="guaraná">
                     </div>
                     <p>Guaraná</p>
                     <span>Lata 350ml</span>
                     <p>R$ 6,00</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-2g"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido milk" onclick="escolherBebida('.milk')">
                     <div class="pedido__imagem">
                         <img src="imagens/milkshake.jpg" alt="Milk shake">
                     </div>
                     <p>Milk Shake de chocolate</p>
                     <span>Milk shake 250ml</span>
                     <p>R$ 14,99</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-2m"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido xbebida" onclick="escolherBebida('.xbebida')">
                     <div class="pedido__imagem">
                         <img src="imagens/x.png" alt="x">
                     </div>
                     <p>Sem bebida</p>
                     <p>R$ 0,00</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-2x"></ion-icon>
                 </article>
+
             </div>
         </section>
 
         <section class="pedidos">
             <h1>Por fim, sua sobremesa</h1>
-            <div class="pedidos__opcoes">
-                <article class="pedido">
+            <div class="pedidos__opcoes sobremesas">
+                
+                <article class="pedido pudim" onclick="escolherSobremesa('.pudim')">
                     <div class="pedido__imagem">
                         <img src="imagens/pudim.png" alt="pudim">
                     </div>
                     <p>Pudim</p>
                     <span>Apenas um pudim</span>
                     <p>R$ 7,90</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-3p"></ion-icon>
                 </article>
                 
-                <article class="pedido">
+                <article class="pedido sundae" onclick="escolherSobremesa('.sundae')">
                     <div class="pedido__imagem">
                         <img src="imagens/sundae.png" alt="sundae">
                     </div>
                     <p>Sundae chocolate</p>
                     <span>Sundae com cobertura de chocolate</span>
                     <p>R$ 9,90</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-3s"></ion-icon>
                 </article>
                 
-                <article class="pedido">
+                <article class="pedido kinder" onclick="escolherSobremesa('.kinder')">
                     <div class="pedido__imagem">
                         <img src="imagens/kinder.jpg" alt="kinder">
                     </div>
                     <p>Fatia Kinder</p>
                     <span>Fatia com chocolate branco e Kinder</span>
                     <p>R$ 24,90</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-3k"></ion-icon>
                 </article>
 
-                <article class="pedido">
+                <article class="pedido xsobremesa" onclick="escolherSobremesa('.xsobremesa')">
                     <div class="pedido__imagem">
                         <img src="imagens/x.png" alt="x">
                     </div>
                     <p>Sem sobremesa</p>
                     <p>R$ 0,00</p>
+                    <ion-icon name="checkmark-circle" class="esconde" id="icon-3x"></ion-icon>
                 </article>
             </div>
         </section>
@@ -151,20 +167,20 @@
             <article class="confirme">
                 <h1>Confirme seu pedido</h1>
                 <div class="confirme__produto">
-                    <p>Frango Yin Yang</p>
-                    <p>R$ 14,90</p>
+                    <p id="comida__nome">Frango Yin Yang</p>
+                    <p id="comida__preco">R$ 14,90</p>
                 </div>
                 <div class="confirme__produto">
-                    <p>Frango Yin Yang</p>
-                    <p>R$ 14,90</p>
+                    <p id="bebida__nome">Frango Yin Yang</p>
+                    <p id="bebida__preco">R$ 14,90</p>
                 </div>
                 <div class="confirme__produto">
-                    <p>Frango Yin Yang</p>
-                    <p>R$ 14,90</p>
+                    <p id="sobremesa__nome">Frango Yin Yang</p>
+                    <p id="sobremesa__preco">R$ 14,90</p>
                 </div>
                 <div class="confirme__preco">
                     <p>TOTAL</p>
-                    <p>R$ 44,70</p>
+                    <p id="preco__total"></p>
                 </div>
                 <button>Tudo certo, pode pedir!</button>
                 <h2 onclick="mostrarConfirme()">cancelar</h2>
@@ -174,11 +190,16 @@
     </main>
 
     <footer>
-        <button onclick="mostrarConfirme()">
+        <button id="botao__cinza" onclick="mostrarConfirme()">
             <p>Selecione os 3 itens para fechar o pedido</p>
+        </button>
+        <button id="botao__verde" class="esconde" onclick="mostrarConfirme()">
+            <p>Fechar pedido</p>
         </button>
     </footer>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
