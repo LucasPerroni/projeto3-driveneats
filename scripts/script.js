@@ -4,6 +4,7 @@ let sobremesa = null
 let precoComida = null
 let precoBebida = null
 let precoSobremesa = null
+let precoTotal = null
 
 function escolherComida(opcaoComida) {
     const contorno = document.querySelector(".comidas .pedido__borda")
@@ -29,6 +30,9 @@ function escolherComida(opcaoComida) {
 
     precoComida = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
+
+    comida += 1
+    mostrarBotaoVerde()
 }
 
 function escolherBebida(opcaoBebida) {
@@ -55,6 +59,9 @@ function escolherBebida(opcaoBebida) {
 
     precoBebida = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
+
+    bebida += 1
+    mostrarBotaoVerde()
 }
 
 function escolherSobremesa(opcaoSobremesa) {
@@ -81,12 +88,21 @@ function escolherSobremesa(opcaoSobremesa) {
 
     precoSobremesa = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
+
+    sobremesa += 1
+    mostrarBotaoVerde()
 }
 
 function preco__total() {
-    let precoTotal = precoComida + precoBebida + precoSobremesa
+    precoTotal = precoComida + precoBebida + precoSobremesa
     document.getElementById("preco__total").innerHTML = ("R$ " + String(precoTotal.toFixed(2)).replace(".", ","))
-    return precoTotal
+}
+
+function mostrarBotaoVerde() {
+    if (comida == 1 && bebida == 1 && sobremesa == 1) {
+        document.getElementById("botao__cinza").classList.toggle("esconde")
+        document.getElementById("botao__verde").classList.toggle("esconde")
+    }
 }
 
 function mostrarConfirme() {
