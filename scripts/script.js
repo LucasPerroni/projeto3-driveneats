@@ -26,7 +26,7 @@ function escolherComida(opcaoComida) {
     let texto = document.getElementById("comida__nome")
     let preco = document.getElementById("comida__preco")
     texto.innerHTML = document.querySelector(opcaoComida + " p:first-of-type").innerHTML
-    preco.innerHTML = document.querySelector(opcaoComida + " p:last-of-type").innerHTML
+    preco.innerHTML = document.querySelector(opcaoComida + " p:last-of-type").innerHTML.replace("R$ ", "")
 
     precoComida = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
@@ -55,7 +55,7 @@ function escolherBebida(opcaoBebida) {
     let texto = document.getElementById("bebida__nome")
     let preco = document.getElementById("bebida__preco")
     texto.innerHTML = document.querySelector(opcaoBebida + " p:first-of-type").innerHTML
-    preco.innerHTML = document.querySelector(opcaoBebida + " p:last-of-type").innerHTML
+    preco.innerHTML = document.querySelector(opcaoBebida + " p:last-of-type").innerHTML.replace("R$ ", "")
 
     precoBebida = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
@@ -84,7 +84,7 @@ function escolherSobremesa(opcaoSobremesa) {
     let texto = document.getElementById("sobremesa__nome")
     let preco = document.getElementById("sobremesa__preco")
     texto.innerHTML = document.querySelector(opcaoSobremesa + " p:first-of-type").innerHTML
-    preco.innerHTML = document.querySelector(opcaoSobremesa + " p:last-of-type").innerHTML
+    preco.innerHTML = document.querySelector(opcaoSobremesa + " p:last-of-type").innerHTML.replace("R$ ", "")
 
     precoSobremesa = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
