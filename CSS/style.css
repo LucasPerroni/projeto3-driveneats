@@ -193,6 +193,12 @@ main {
     font-weight: 700;
 }
 
+a {
+    height: 52px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+}
+
 /* footer */
 
 footer {

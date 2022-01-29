@@ -31,7 +31,7 @@ function escolherComida(opcaoComida) {
     precoComida = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
 
-    comida += 1
+    comida = 1
     mostrarBotaoVerde()
 }
 
@@ -60,7 +60,7 @@ function escolherBebida(opcaoBebida) {
     precoBebida = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
 
-    bebida += 1
+    bebida = 1
     mostrarBotaoVerde()
 }
 
@@ -89,7 +89,7 @@ function escolherSobremesa(opcaoSobremesa) {
     precoSobremesa = parseFloat(preco.innerHTML.replace("R$ ", "").replace(",", "."))
     preco__total()
 
-    sobremesa += 1
+    sobremesa = 1
     mostrarBotaoVerde()
 }
 
@@ -100,12 +100,22 @@ function preco__total() {
 
 function mostrarBotaoVerde() {
     if (comida == 1 && bebida == 1 && sobremesa == 1) {
-        document.getElementById("botao__cinza").classList.toggle("esconde")
-        document.getElementById("botao__verde").classList.toggle("esconde")
+        document.getElementById("botao__cinza").classList.add("esconde")
+        document.getElementById("botao__verde").classList.remove("esconde")
     }
 }
 
 function mostrarConfirme() {
     const elemento = document.querySelector(".confirme__total")
     elemento.classList.toggle("esconde")
+}
+
+function referencia() {
+    let prato__wpp = document.getElementById("comida__nome").innerHTML
+    let bebida__wpp = document.getElementById("bebida__nome").innerHTML
+    let sobremesa__wpp = document.getElementById("sobremesa__nome").innerHTML
+
+    let texto__base = "Olá, eu gostaria de fazer o pedido: \n - Prato:  " + prato__wpp + "\n - Bebida:  " + bebida__wpp + "\n - Sobremesa:  " + sobremesa__wpp + "\nTotal: R$ " + precoTotal.toFixed(2)
+    let texto__final = encodeURIComponent(texto__base)
+    document.getElementById("link__wpp").href = ("https://wa.me/5541988591886?text=" + texto__final)
 }
